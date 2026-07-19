@@ -293,7 +293,7 @@ footer a{font-weight:700}
         <button class="tool-card" onclick="showTool('imgedit')"><div class="tool-icon ic-img">🎨</div><h3>Photo Editor</h3><p>Brightness, contrast, saturation, filters, rotate and flip — right in the browser.</p></button>
         <button class="tool-card" onclick="showTool('imgresize')"><div class="tool-icon ic-img">⤢</div><h3>Resize Image</h3><p>Scale an image to exact pixel dimensions, keeping proportions if you want.</p></button>
         <button class="tool-card" onclick="showTool('imgconvert')"><div class="tool-icon ic-img">⇄</div><h3>Convert Image</h3><p>Switch between PNG, JPG and WebP formats instantly.</p></button>
-        <button class="tool-card" onclick="showTool('imgcompress')"><div class="tool-icon ic-img">▼</div><h3>Compress Image</h3><p>Reduce image file size with an adjustable quality slider.</p></button>
+        <button class="tool-card" onclick="showTool('imgcompress')"><div class="tool-icon ic-img">▼</div><h3>Compress Image</h3><p>Shrink one image or a whole batch — many files become one ZIP.</p></button>
       </div>
     </section>
 
@@ -433,7 +433,7 @@ footer a{font-weight:700}
 <section class="tool-view" id="tv-imgcompress">
   <button class="back-btn" onclick="goHome()">← All tools</button>
   <h2>Compress Image</h2><p class="tool-sub">Lower the quality to shrink the file. Output is JPG.</p>
-  <div class="dropzone" id="dz-imgcompress"><div class="dz-icon">▼</div><div class="dz-title">Drop an image here or click to browse</div><div class="dz-hint">JPG, PNG or WebP</div><input type="file" accept="image/*"></div>
+  <div class="dropzone" id="dz-imgcompress"><div class="dz-icon">▼</div><div class="dz-title">Drop images here or click to browse</div><div class="dz-hint">JPG, PNG or WebP — one or many (batch = ZIP download)</div><input type="file" accept="image/*" multiple></div>
   <div class="file-list" id="fl-imgcompress"></div>
   <div class="controls"><div class="field"><label for="ic-q">Quality: <span id="ic-qv">75</span>%</label><input type="range" id="ic-q" min="20" max="95" value="75"></div></div>
   <div class="action-row"><button class="primary-btn" id="btn-imgcompress" disabled>Compress image</button></div>
@@ -814,16 +814,54 @@ $("btn-imgconvert").onclick=async()=>{
   showResult("rb-imgconvert","Converted to "+ext.toUpperCase(),fmtSize(f.size)+" → "+fmtSize(blob.size),blob,"converted."+ext);
 };
 
-setupDrop("imgcompress");
+setupDrop("imgcompress",{multiple:true});
 $("ic-q").oninput=e=>$("ic-qv").textContent=e.target.value;
-$("btn-imgcompress").onclick=async()=>{
-  const f=store.imgcompress[0], q=+$("ic-q").value/100;
+async function compressOne(f,q){
   const img=await loadImage(f);
   const cv=document.createElement("canvas"); cv.width=img.width; cv.height=img.height;
-  const ctx=cv.getContext("2d"); ctx.fillStyle="#fff"; ctx.fillRect(0,0,cv.width,cv.height); ctx.drawImage(img,0,0);
-  const blob=await new Promise(r=>cv.toBlob(r,"image/jpeg",q));
-  const pct=f.size>blob.size?Math.round((f.size-blob.size)/f.size*100):0;
-  showResult("rb-imgcompress",pct>0?("Compressed — "+pct+"% smaller"):"Done",fmtSize(f.size)+" → "+fmtSize(blob.size),blob,"compressed.jpg");
+  const ctx=cv.getContext("2d");
+  const isPng=f.type==="image/png";
+  if(!isPng){ ctx.fillStyle="#fff"; ctx.fillRect(0,0,cv.width,cv.height); }
+  ctx.drawImage(img,0,0);
+  /* PNG stays PNG (transparency safe), baqi sab JPEG */
+  const type=isPng?"image/png":"image/jpeg";
+  let blob=await new Promise(r=>cv.toBlob(r,type,q));
+  /* agar PNG compress se bara ho jaye to JPEG try karo */
+  if(isPng && blob.size>=f.size){
+    const cv2=document.createElement("canvas"); cv2.width=img.width; cv2.height=img.height;
+    const c2=cv2.getContext("2d"); c2.fillStyle="#fff"; c2.fillRect(0,0,cv2.width,cv2.height); c2.drawImage(img,0,0);
+    const jblob=await new Promise(r=>cv2.toBlob(r,"image/jpeg",q));
+    if(jblob.size<blob.size) return {blob:jblob, ext:"jpg"};
+  }
+  return {blob, ext:isPng?"png":"jpg"};
+}
+$("btn-imgcompress").onclick=async()=>{
+  const files=store.imgcompress, q=+$("ic-q").value/100;
+  if(!files.length) return;
+  try{
+    if(files.length===1){
+      const f=files[0];
+      const {blob,ext}=await compressOne(f,q);
+      const pct=f.size>blob.size?Math.round((f.size-blob.size)/f.size*100):0;
+      const base=f.name.replace(/\.[^.]+$/,"");
+      showResult("rb-imgcompress",pct>0?("Compressed — "+pct+"% smaller"):"Done",fmtSize(f.size)+" → "+fmtSize(blob.size),blob,base+"."+ext);
+      return;
+    }
+    /* batch mode → ZIP, original naam mehfooz */
+    const zip=new JSZip();
+    let inTotal=0,outTotal=0;
+    for(let i=0;i<files.length;i++){
+      const f=files[i];
+      const {blob,ext}=await compressOne(f,q);
+      const base=f.name.replace(/\.[^.]+$/,"");
+      zip.file(base+"."+ext,blob);
+      inTotal+=f.size; outTotal+=blob.size;
+      showResult("rb-imgcompress","Compressing… "+(i+1)+" of "+files.length,fmtSize(inTotal)+" processed",null,"");
+    }
+    const zblob=await zip.generateAsync({type:"blob"});
+    const pct=inTotal>outTotal?Math.round((inTotal-outTotal)/inTotal*100):0;
+    showResult("rb-imgcompress",files.length+" images compressed — "+pct+"% smaller overall",fmtSize(inTotal)+" → "+fmtSize(outTotal)+" (ZIP: "+fmtSize(zblob.size)+")",zblob,"compressed-images.zip");
+  }catch(e){ toast("Ek image compress nahi hui — format check karo"); console.error(e); }
 };
 
 /* ---------- text tools ---------- */
