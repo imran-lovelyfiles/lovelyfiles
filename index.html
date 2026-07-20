@@ -267,16 +267,20 @@ footer a{font-weight:700}
 
   <main>
     <section class="tool-section" id="creator-tools">
-      <div class="section-head"><h2>AI Prompt Tools</h2><span class="count">02 tools · our specialty</span></div>
+      <div class="section-head"><h2>AI Prompt Tools</h2><span class="count">03 tools · our specialty</span></div>
       <div class="grid">
         <button class="tool-card" onclick="showTool('imgprompt')"><div class="tool-icon ic-util">✦</div><h3>Image Prompt Builder</h3><p>Describe your idea, pick a style — get a detailed, professional prompt for Midjourney, DALL-E, Flux and more.</p></button>
         <button class="tool-card" onclick="showTool('vidprompt')"><div class="tool-icon ic-util">🎬</div><h3>Video Prompt Builder</h3><p>Build cinematic shot prompts for Seedance, Veo, Kling and Runway — camera moves, lighting, the works.</p></button>
+        <button class="tool-card" onclick="showTool('promptidea')"><div class="tool-icon ic-util">🎲</div><h3>Prompt Ideas</h3><p>Stuck? Roll the dice and get a fresh, random prompt idea to spark you.</p></button>
       </div>
     </section>
 
     <section class="tool-section" id="pdf-tools">
-      <div class="section-head"><h2>PDF Tools</h2><span class="count">07 tools</span></div>
+      <div class="section-head"><h2>PDF Tools</h2><span class="count">14 tools</span></div>
       <div class="grid">
+        <button class="tool-card" onclick="showTool('pdffill')"><div class="tool-icon ic-pdf">✎</div><h3>Fill &amp; Edit PDF</h3><p>Fill form fields automatically, or click anywhere on the page to add text.</p></button>
+        <button class="tool-card" onclick="showTool('pdf2doc')"><div class="tool-icon ic-pdf">W</div><h3>PDF to Word</h3><p>Extract all text into an editable Word (.docx) document.</p></button>
+        <button class="tool-card" onclick="showTool('pdf2xls')"><div class="tool-icon ic-pdf">▦</div><h3>PDF to Excel</h3><p>Pull tables and text into an Excel (.xlsx) spreadsheet, one sheet per page.</p></button>
         <button class="tool-card" onclick="showTool('merge')"><div class="tool-icon ic-pdf">⊕</div><h3>Merge PDF</h3><p>Combine multiple PDFs into a single document, in the order you choose.</p></button>
         <button class="tool-card" onclick="showTool('split')"><div class="tool-icon ic-pdf">✂</div><h3>Split PDF</h3><p>Extract specific pages or ranges into a new PDF.</p></button>
         <button class="tool-card" onclick="showTool('rotate')"><div class="tool-icon ic-pdf">⟳</div><h3>Rotate PDF</h3><p>Rotate every page by 90°, 180° or 270°.</p></button>
@@ -284,32 +288,50 @@ footer a{font-weight:700}
         <button class="tool-card" onclick="showTool('pdf2img')"><div class="tool-icon ic-pdf">🖼</div><h3>PDF to Images</h3><p>Turn every page into a PNG image, downloaded as a ZIP.</p></button>
         <button class="tool-card" onclick="showTool('img2pdf')"><div class="tool-icon ic-pdf">📄</div><h3>Images to PDF</h3><p>Combine JPG and PNG images into one PDF document.</p></button>
         <button class="tool-card" onclick="showTool('pdftext')"><div class="tool-icon ic-pdf">Tt</div><h3>Extract Text</h3><p>Pull all selectable text out of a PDF to copy or save.</p></button>
+        <button class="tool-card" onclick="showTool('pdfwm')"><div class="tool-icon ic-pdf">◈</div><h3>Watermark PDF</h3><p>Stamp text like DRAFT or your name diagonally across every page.</p></button>
+        <button class="tool-card" onclick="showTool('pdfnum')"><div class="tool-icon ic-pdf">#</div><h3>Page Numbers</h3><p>Add automatic page numbers to the bottom of every page.</p></button>
+        <button class="tool-card" onclick="showTool('pdfdel')"><div class="tool-icon ic-pdf">⊖</div><h3>Delete Pages</h3><p>Remove specific pages or ranges from a PDF.</p></button>
+        <button class="tool-card" onclick="showTool('pdforder')"><div class="tool-icon ic-pdf">⇅</div><h3>Reorder Pages</h3><p>Move pages up and down to change their order.</p></button>
       </div>
     </section>
 
     <section class="tool-section" id="image-tools">
-      <div class="section-head"><h2>Image Tools</h2><span class="count">04 tools</span></div>
+      <div class="section-head"><h2>Image Tools</h2><span class="count">09 tools</span></div>
       <div class="grid">
         <button class="tool-card" onclick="showTool('imgedit')"><div class="tool-icon ic-img">🎨</div><h3>Photo Editor</h3><p>Brightness, contrast, saturation, filters, rotate and flip — right in the browser.</p></button>
         <button class="tool-card" onclick="showTool('imgresize')"><div class="tool-icon ic-img">⤢</div><h3>Resize Image</h3><p>Scale an image to exact pixel dimensions, keeping proportions if you want.</p></button>
         <button class="tool-card" onclick="showTool('imgconvert')"><div class="tool-icon ic-img">⇄</div><h3>Convert Image</h3><p>Switch between PNG, JPG and WebP formats instantly.</p></button>
         <button class="tool-card" onclick="showTool('imgcompress')"><div class="tool-icon ic-img">▼</div><h3>Compress Image</h3><p>Shrink one image or a whole batch — many files become one ZIP.</p></button>
+        <button class="tool-card" onclick="showTool('imgcrop')"><div class="tool-icon ic-img">⬚</div><h3>Crop Image</h3><p>Drag a box over the image and cut out exactly what you need.</p></button>
+        <button class="tool-card" onclick="showTool('imgwm')"><div class="tool-icon ic-img">©</div><h3>Watermark Image</h3><p>Put your name or brand on a photo — position and opacity included.</p></button>
+        <button class="tool-card" onclick="showTool('meme')"><div class="tool-icon ic-img">😂</div><h3>Meme Generator</h3><p>Top text, bottom text, instant classic. You know what this is.</p></button>
+        <button class="tool-card" onclick="showTool('favicon')"><div class="tool-icon ic-img">▣</div><h3>Favicon Generator</h3><p>Turn one image into every favicon size a website needs — as a ZIP.</p></button>
+        <button class="tool-card" onclick="showTool('colorpick')"><div class="tool-icon ic-img">◉</div><h3>Color Picker</h3><p>Click anywhere on an image to get its exact HEX and RGB color.</p></button>
       </div>
     </section>
 
     <section class="tool-section" id="text-tools">
-      <div class="section-head"><h2>Text Tools</h2><span class="count">02 tools</span></div>
+      <div class="section-head"><h2>Text Tools</h2><span class="count">05 tools</span></div>
       <div class="grid">
         <button class="tool-card" onclick="showTool('wordcount')"><div class="tool-icon ic-txt">№</div><h3>Word Counter</h3><p>Count words, characters, sentences and reading time as you type.</p></button>
         <button class="tool-card" onclick="showTool('caseconv')"><div class="tool-icon ic-txt">Aa</div><h3>Case Converter</h3><p>UPPERCASE, lowercase, Title Case, Sentence case — one click each.</p></button>
+        <button class="tool-card" onclick="showTool('textclean')"><div class="tool-icon ic-txt">✧</div><h3>Text Cleaner</h3><p>Remove extra spaces, empty lines and duplicate lines in one click.</p></button>
+        <button class="tool-card" onclick="showTool('markdown')"><div class="tool-icon ic-txt">M↓</div><h3>Markdown Editor</h3><p>Write Markdown on the left, see it rendered live on the right.</p></button>
+        <button class="tool-card" onclick="showTool('tts')"><div class="tool-icon ic-txt">🔊</div><h3>Text to Speech</h3><p>Your browser reads any text aloud — pick a voice and speed.</p></button>
       </div>
     </section>
 
     <section class="tool-section" id="utilities">
-      <div class="section-head"><h2>Utilities</h2><span class="count">02 tools</span></div>
+      <div class="section-head"><h2>Utilities</h2><span class="count">08 tools</span></div>
       <div class="grid">
         <button class="tool-card" onclick="showTool('qrcode')"><div class="tool-icon ic-util">▦</div><h3>QR Code Maker</h3><p>Turn any link or text into a downloadable QR code.</p></button>
         <button class="tool-card" onclick="showTool('base64')"><div class="tool-icon ic-util">64</div><h3>Base64 Encode / Decode</h3><p>Convert text to Base64 and back again.</p></button>
+        <button class="tool-card" onclick="showTool('urlenc')"><div class="tool-icon ic-util">%</div><h3>URL Encode / Decode</h3><p>Make text safe for links, or decode messy %20 strings.</p></button>
+        <button class="tool-card" onclick="showTool('jsonfmt')"><div class="tool-icon ic-util">{}</div><h3>JSON Formatter</h3><p>Format, validate and minify JSON instantly.</p></button>
+        <button class="tool-card" onclick="showTool('passgen')"><div class="tool-icon ic-util">🔑</div><h3>Password Generator</h3><p>Strong random passwords with the options you choose.</p></button>
+        <button class="tool-card" onclick="showTool('uuidgen')"><div class="tool-icon ic-util">ID</div><h3>UUID &amp; Random</h3><p>Generate UUIDs and random numbers in any range.</p></button>
+        <button class="tool-card" onclick="showTool('unitconv')"><div class="tool-icon ic-util">⇋</div><h3>Unit Converter</h3><p>Length, weight and temperature — quick conversions.</p></button>
+        <button class="tool-card" onclick="showTool('invoice')"><div class="tool-icon ic-util">🧾</div><h3>Invoice Generator</h3><p>Fill a simple form, get a clean PDF invoice — freelancers rejoice.</p></button>
       </div>
     </section>
   </main>
@@ -403,6 +425,51 @@ footer a{font-weight:700}
   <div class="file-list" id="fl-pdftext"></div>
   <div class="action-row"><button class="primary-btn" id="btn-pdftext" disabled>Extract text</button><button class="ghost-btn" id="btn-pdftext-copy" style="display:none">Copy text</button><button class="ghost-btn" id="btn-pdftext-dl" style="display:none">Download .txt</button></div>
   <div class="controls" style="display:block"><textarea id="pdftext-out" placeholder="Extracted text will appear here…" style="margin-top:20px"></textarea></div>
+</section>
+
+<section class="tool-view" id="tv-pdf2doc">
+  <button class="back-btn" onclick="goHome()">← All tools</button>
+  <h2>PDF to Word</h2><p class="tool-sub">Extracts all text into an editable .docx. Text comes through cleanly; exact layouts, images and designs don't (that needs the original text layer, and scans won't work).</p>
+  <div class="dropzone" id="dz-pdf2doc"><div class="dz-icon">W</div><div class="dz-title">Drop a PDF here or click to browse</div><div class="dz-hint">One file</div><input type="file" accept="application/pdf"></div>
+  <div class="file-list" id="fl-pdf2doc"></div>
+  <div class="action-row"><button class="primary-btn" id="btn-pdf2doc" disabled>Convert to Word</button></div>
+  <div class="progress-wrap" id="pw-pdf2doc"><div class="progress-bar"><div class="progress-fill"></div></div><div class="progress-label">Working…</div></div>
+  <div class="result-box" id="rb-pdf2doc"></div>
+</section>
+
+<section class="tool-view" id="tv-pdf2xls">
+  <button class="back-btn" onclick="goHome()">← All tools</button>
+  <h2>PDF to Excel</h2><p class="tool-sub">Pulls text and simple tables into an .xlsx — one sheet per page. Works best with clean, grid-style tables; complex layouts may need tidying afterwards.</p>
+  <div class="dropzone" id="dz-pdf2xls"><div class="dz-icon">▦</div><div class="dz-title">Drop a PDF here or click to browse</div><div class="dz-hint">One file</div><input type="file" accept="application/pdf"></div>
+  <div class="file-list" id="fl-pdf2xls"></div>
+  <div class="action-row"><button class="primary-btn" id="btn-pdf2xls" disabled>Convert to Excel</button></div>
+  <div class="progress-wrap" id="pw-pdf2xls"><div class="progress-bar"><div class="progress-fill"></div></div><div class="progress-label">Working…</div></div>
+  <div class="result-box" id="rb-pdf2xls"></div>
+</section>
+
+<section class="tool-view" id="tv-pdffill">
+  <button class="back-btn" onclick="goHome()">← All tools</button>
+  <h2>Fill &amp; Edit PDF</h2><p class="tool-sub">Two ways: fillable form fields are detected automatically below — or use "Add text" to click anywhere on the page and type.</p>
+  <div class="dropzone" id="dz-pdffill"><div class="dz-icon">✎</div><div class="dz-title">Drop a PDF here or click to browse</div><div class="dz-hint">One file</div><input type="file" accept="application/pdf"></div>
+  <div class="file-list" id="fl-pdffill"></div>
+
+  <div id="pf-workspace" style="display:none">
+    <h3 style="margin:26px 0 10px;font-size:18px">1 · Form fields</h3>
+    <div id="pf-fields" class="controls" style="display:flex;flex-direction:column;align-items:stretch;gap:12px"></div>
+
+    <h3 style="margin:30px 0 6px;font-size:18px">2 · Add text anywhere</h3>
+    <p style="color:var(--muted);font-size:14px;margin-bottom:12px">Type your text, then click on the page preview where you want it placed.</p>
+    <div class="controls" style="margin-top:0">
+      <div class="field"><label for="pf-page">Page</label><input type="number" id="pf-page" min="1" value="1" style="width:90px"></div>
+      <div class="field" style="flex:1;min-width:200px"><label for="pf-text">Text to place</label><input type="text" id="pf-text" placeholder="e.g. Imran Fareed" style="width:100%"></div>
+      <div class="field"><label for="pf-size">Size</label><input type="number" id="pf-size" min="6" max="72" value="12" style="width:80px"></div>
+    </div>
+    <canvas id="pf-canvas" style="max-width:100%;border:1px solid var(--line);border-radius:12px;margin-top:16px;cursor:crosshair;display:block"></canvas>
+    <div class="file-list" id="pf-stamps"></div>
+
+    <div class="action-row"><button class="primary-btn" id="btn-pdffill">Download filled PDF</button></div>
+    <div class="result-box" id="rb-pdffill"></div>
+  </div>
 </section>
 
 <section class="tool-view" id="tv-imgresize">
@@ -548,6 +615,234 @@ footer a{font-weight:700}
   <div class="action-row"><button class="primary-btn" id="btn-imgedit-dl" disabled>Download edited image</button><button class="ghost-btn" onclick="edReset()">Reset all</button></div>
 </section>
 
+
+<section class="tool-view" id="tv-pdfwm">
+  <button class="back-btn" onclick="goHome()">← All tools</button>
+  <h2>Watermark PDF</h2><p class="tool-sub">Your text is stamped diagonally across every page.</p>
+  <div class="dropzone" id="dz-pdfwm"><div class="dz-icon">◈</div><div class="dz-title">Drop a PDF here or click to browse</div><div class="dz-hint">One file</div><input type="file" accept="application/pdf"></div>
+  <div class="file-list" id="fl-pdfwm"></div>
+  <div class="controls">
+    <div class="field" style="flex:1;min-width:180px"><label for="wm-text">Watermark text</label><input type="text" id="wm-text" placeholder="DRAFT" style="width:100%"></div>
+    <div class="field"><label for="wm-op">Opacity: <span id="wm-opv">20</span>%</label><input type="range" id="wm-op" min="5" max="60" value="20"></div>
+  </div>
+  <div class="action-row"><button class="primary-btn" id="btn-pdfwm" disabled>Add watermark</button></div>
+  <div class="result-box" id="rb-pdfwm"></div>
+</section>
+
+<section class="tool-view" id="tv-pdfnum">
+  <button class="back-btn" onclick="goHome()">← All tools</button>
+  <h2>Page Numbers</h2><p class="tool-sub">Numbers are added at the bottom-center of every page.</p>
+  <div class="dropzone" id="dz-pdfnum"><div class="dz-icon">#</div><div class="dz-title">Drop a PDF here or click to browse</div><div class="dz-hint">One file</div><input type="file" accept="application/pdf"></div>
+  <div class="file-list" id="fl-pdfnum"></div>
+  <div class="controls"><div class="field"><label for="num-style">Style</label><select id="num-style"><option value="n">1, 2, 3…</option><option value="of">1 of N</option><option value="dash">— 1 —</option></select></div></div>
+  <div class="action-row"><button class="primary-btn" id="btn-pdfnum" disabled>Add page numbers</button></div>
+  <div class="result-box" id="rb-pdfnum"></div>
+</section>
+
+<section class="tool-view" id="tv-pdfdel">
+  <button class="back-btn" onclick="goHome()">← All tools</button>
+  <h2>Delete Pages</h2><p class="tool-sub">Enter the pages to remove, like <b>2, 5-7</b>. Everything else stays.</p>
+  <div class="dropzone" id="dz-pdfdel"><div class="dz-icon">⊖</div><div class="dz-title">Drop a PDF here or click to browse</div><div class="dz-hint">One file</div><input type="file" accept="application/pdf"></div>
+  <div class="file-list" id="fl-pdfdel"></div>
+  <div class="controls"><div class="field"><label for="del-range">Pages to delete</label><input type="text" id="del-range" placeholder="e.g. 2, 5-7"></div></div>
+  <div class="action-row"><button class="primary-btn" id="btn-pdfdel" disabled>Delete pages</button></div>
+  <div class="result-box" id="rb-pdfdel"></div>
+</section>
+
+<section class="tool-view" id="tv-pdforder">
+  <button class="back-btn" onclick="goHome()">← All tools</button>
+  <h2>Reorder Pages</h2><p class="tool-sub">Use ↑ and ↓ to move pages, then download the reordered PDF.</p>
+  <div class="dropzone" id="dz-pdforder"><div class="dz-icon">⇅</div><div class="dz-title">Drop a PDF here or click to browse</div><div class="dz-hint">One file</div><input type="file" accept="application/pdf"></div>
+  <div class="file-list" id="fl-pdforder"></div>
+  <div class="file-list" id="order-list"></div>
+  <div class="action-row"><button class="primary-btn" id="btn-pdforder" disabled>Download reordered PDF</button></div>
+  <div class="result-box" id="rb-pdforder"></div>
+</section>
+
+<section class="tool-view" id="tv-imgcrop">
+  <button class="back-btn" onclick="goHome()">← All tools</button>
+  <h2>Crop Image</h2><p class="tool-sub">Drag a box over the preview to select the crop area. (Works best with a mouse.)</p>
+  <div class="dropzone" id="dz-imgcrop"><div class="dz-icon">⬚</div><div class="dz-title">Drop an image here or click to browse</div><div class="dz-hint">JPG, PNG or WebP</div><input type="file" accept="image/*"></div>
+  <div class="file-list" id="fl-imgcrop"></div>
+  <canvas id="crop-canvas" style="max-width:100%;border:1px solid var(--line);border-radius:12px;margin-top:16px;cursor:crosshair;display:none"></canvas>
+  <div class="action-row"><button class="primary-btn" id="btn-imgcrop" disabled>Crop &amp; download</button><button class="ghost-btn" id="btn-cropreset" style="display:none">Reset selection</button></div>
+  <div class="result-box" id="rb-imgcrop"></div>
+</section>
+
+<section class="tool-view" id="tv-imgwm">
+  <button class="back-btn" onclick="goHome()">← All tools</button>
+  <h2>Watermark Image</h2><p class="tool-sub">Put your name or brand on the photo.</p>
+  <div class="dropzone" id="dz-imgwm"><div class="dz-icon">©</div><div class="dz-title">Drop an image here or click to browse</div><div class="dz-hint">JPG, PNG or WebP</div><input type="file" accept="image/*"></div>
+  <div class="file-list" id="fl-imgwm"></div>
+  <div class="controls">
+    <div class="field" style="flex:1;min-width:160px"><label for="iwm-text">Watermark text</label><input type="text" id="iwm-text" placeholder="© Imran" style="width:100%"></div>
+    <div class="field"><label for="iwm-pos">Position</label><select id="iwm-pos"><option value="br">Bottom right</option><option value="bl">Bottom left</option><option value="tr">Top right</option><option value="tl">Top left</option><option value="c">Center</option></select></div>
+    <div class="field"><label for="iwm-op">Opacity: <span id="iwm-opv">50</span>%</label><input type="range" id="iwm-op" min="10" max="100" value="50"></div>
+  </div>
+  <div class="action-row"><button class="primary-btn" id="btn-imgwm" disabled>Add watermark</button></div>
+  <img class="preview-img" id="pv-imgwm" alt="Watermarked preview">
+  <div class="result-box" id="rb-imgwm"></div>
+</section>
+
+<section class="tool-view" id="tv-meme">
+  <button class="back-btn" onclick="goHome()">← All tools</button>
+  <h2>Meme Generator</h2><p class="tool-sub">Top text. Bottom text. Internet history.</p>
+  <div class="dropzone" id="dz-meme"><div class="dz-icon">😂</div><div class="dz-title">Drop an image here or click to browse</div><div class="dz-hint">JPG, PNG or WebP</div><input type="file" accept="image/*"></div>
+  <div class="file-list" id="fl-meme"></div>
+  <div class="controls">
+    <div class="field" style="flex:1;min-width:160px"><label for="meme-top">Top text</label><input type="text" id="meme-top" placeholder="WHEN YOU BUILD 2 WEBSITES" style="width:100%"></div>
+    <div class="field" style="flex:1;min-width:160px"><label for="meme-bottom">Bottom text</label><input type="text" id="meme-bottom" placeholder="IN 2 DAYS" style="width:100%"></div>
+  </div>
+  <div class="action-row"><button class="primary-btn" id="btn-meme" disabled>Make meme</button></div>
+  <img class="preview-img" id="pv-meme" alt="Meme preview">
+  <div class="result-box" id="rb-meme"></div>
+</section>
+
+<section class="tool-view" id="tv-favicon">
+  <button class="back-btn" onclick="goHome()">← All tools</button>
+  <h2>Favicon Generator</h2><p class="tool-sub">One square-ish image in, every favicon size out (16 to 512 px) as a ZIP.</p>
+  <div class="dropzone" id="dz-favicon"><div class="dz-icon">▣</div><div class="dz-title">Drop an image here or click to browse</div><div class="dz-hint">PNG or JPG — square works best</div><input type="file" accept="image/*"></div>
+  <div class="file-list" id="fl-favicon"></div>
+  <div class="action-row"><button class="primary-btn" id="btn-favicon" disabled>Generate favicons</button></div>
+  <div class="result-box" id="rb-favicon"></div>
+</section>
+
+<section class="tool-view" id="tv-colorpick">
+  <button class="back-btn" onclick="goHome()">← All tools</button>
+  <h2>Color Picker</h2><p class="tool-sub">Click anywhere on the image to grab that exact color.</p>
+  <div class="dropzone" id="dz-colorpick"><div class="dz-icon">◉</div><div class="dz-title">Drop an image here or click to browse</div><div class="dz-hint">JPG, PNG or WebP</div><input type="file" accept="image/*"></div>
+  <div class="file-list" id="fl-colorpick"></div>
+  <canvas id="cp-canvas" style="max-width:100%;border:1px solid var(--line);border-radius:12px;margin-top:16px;cursor:crosshair;display:none"></canvas>
+  <div class="controls" id="cp-result" style="display:none">
+    <div id="cp-swatch" style="width:52px;height:52px;border-radius:12px;border:1px solid var(--line)"></div>
+    <div class="field"><label>HEX</label><input type="text" id="cp-hex" readonly style="width:120px"></div>
+    <div class="field"><label>RGB</label><input type="text" id="cp-rgb" readonly style="width:170px"></div>
+    <button class="ghost-btn" onclick="copyText(document.getElementById('cp-hex').value)" style="align-self:flex-end">Copy HEX</button>
+  </div>
+</section>
+
+<section class="tool-view" id="tv-textclean">
+  <button class="back-btn" onclick="goHome()">← All tools</button>
+  <h2>Text Cleaner</h2><p class="tool-sub">Tick what to clean, paste your text, done.</p>
+  <div class="controls" style="margin-top:0">
+    <label style="font-weight:700;font-size:14px"><input type="checkbox" id="tc-spaces" checked> Collapse extra spaces</label>
+    <label style="font-weight:700;font-size:14px"><input type="checkbox" id="tc-empty" checked> Remove empty lines</label>
+    <label style="font-weight:700;font-size:14px"><input type="checkbox" id="tc-dupes"> Remove duplicate lines</label>
+    <label style="font-weight:700;font-size:14px"><input type="checkbox" id="tc-trim" checked> Trim line edges</label>
+  </div>
+  <textarea id="tc-in" placeholder="Paste messy text here…" style="margin-top:14px"></textarea>
+  <div class="action-row"><button class="primary-btn" onclick="cleanText()">Clean text</button><button class="ghost-btn" onclick="copyText(document.getElementById('tc-in').value)">Copy result</button></div>
+</section>
+
+<section class="tool-view" id="tv-markdown">
+  <button class="back-btn" onclick="goHome()">← All tools</button>
+  <h2>Markdown Editor</h2><p class="tool-sub">Type Markdown on top — the preview updates live below.</p>
+  <textarea id="md-in" placeholder="# Hello&#10;&#10;Write **bold**, *italic*, `code`, [links](https://lovelyfiles.com) and lists:&#10;&#10;- like&#10;- this"></textarea>
+  <div id="md-out" style="background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 24px;margin-top:14px;min-height:120px"></div>
+</section>
+
+<section class="tool-view" id="tv-tts">
+  <button class="back-btn" onclick="goHome()">← All tools</button>
+  <h2>Text to Speech</h2><p class="tool-sub">Your browser reads the text aloud — nothing is sent anywhere.</p>
+  <textarea id="tts-in" placeholder="Type or paste text to hear it spoken…"></textarea>
+  <div class="controls">
+    <div class="field" style="flex:1;min-width:200px"><label for="tts-voice">Voice</label><select id="tts-voice" style="width:100%"></select></div>
+    <div class="field"><label for="tts-rate">Speed: <span id="tts-ratev">1.0</span>x</label><input type="range" id="tts-rate" min="0.5" max="2" step="0.1" value="1"></div>
+  </div>
+  <div class="action-row"><button class="primary-btn" onclick="ttsPlay()">▶ Speak</button><button class="ghost-btn" onclick="speechSynthesis.cancel()">■ Stop</button></div>
+</section>
+
+<section class="tool-view" id="tv-urlenc">
+  <button class="back-btn" onclick="goHome()">← All tools</button>
+  <h2>URL Encode / Decode</h2><p class="tool-sub">Make text link-safe, or turn %20 soup back into words.</p>
+  <div class="field" style="margin-bottom:14px"><label for="url-in">Input</label><textarea id="url-in" placeholder="hello world & friends  —or—  hello%20world%20%26%20friends"></textarea></div>
+  <div class="action-row" style="margin:0 0 14px">
+    <button class="primary-btn" onclick="urlConv('enc')">Encode →</button>
+    <button class="ghost-btn" onclick="urlConv('dec')">← Decode</button>
+    <button class="ghost-btn" onclick="copyText(document.getElementById('url-out').value)">Copy result</button>
+  </div>
+  <div class="field"><label for="url-out">Result</label><textarea id="url-out" readonly></textarea></div>
+</section>
+
+<section class="tool-view" id="tv-jsonfmt">
+  <button class="back-btn" onclick="goHome()">← All tools</button>
+  <h2>JSON Formatter</h2><p class="tool-sub">Paste JSON — format it beautifully or minify it tight. Errors get caught too.</p>
+  <div class="field" style="margin-bottom:14px"><label for="json-in">Input</label><textarea id="json-in" placeholder='{"name":"lovelyfiles","free":true}' style="font-family:'JetBrains Mono',monospace;font-size:13px"></textarea></div>
+  <div class="action-row" style="margin:0 0 14px">
+    <button class="primary-btn" onclick="jsonFmt(2)">Format ✨</button>
+    <button class="ghost-btn" onclick="jsonFmt(0)">Minify</button>
+    <button class="ghost-btn" onclick="copyText(document.getElementById('json-out').value)">Copy result</button>
+  </div>
+  <div class="field"><label for="json-out">Result</label><textarea id="json-out" readonly style="font-family:'JetBrains Mono',monospace;font-size:13px"></textarea></div>
+</section>
+
+<section class="tool-view" id="tv-passgen">
+  <button class="back-btn" onclick="goHome()">← All tools</button>
+  <h2>Password Generator</h2><p class="tool-sub">Generated on your device with secure randomness — never seen by anyone.</p>
+  <div class="controls" style="margin-top:0">
+    <div class="field"><label for="pg-len">Length: <span id="pg-lenv">16</span></label><input type="range" id="pg-len" min="8" max="64" value="16"></div>
+    <label style="font-weight:700;font-size:14px"><input type="checkbox" id="pg-upper" checked> ABC</label>
+    <label style="font-weight:700;font-size:14px"><input type="checkbox" id="pg-lower" checked> abc</label>
+    <label style="font-weight:700;font-size:14px"><input type="checkbox" id="pg-digits" checked> 123</label>
+    <label style="font-weight:700;font-size:14px"><input type="checkbox" id="pg-symbols" checked> #$!</label>
+  </div>
+  <div class="controls"><div class="field" style="flex:1"><label for="pg-out">Your password</label><input type="text" id="pg-out" readonly style="width:100%;font-family:'JetBrains Mono',monospace;font-size:16px"></div></div>
+  <div class="action-row"><button class="primary-btn" onclick="genPass()">Generate 🔑</button><button class="ghost-btn" onclick="copyText(document.getElementById('pg-out').value)">Copy</button></div>
+</section>
+
+<section class="tool-view" id="tv-uuidgen">
+  <button class="back-btn" onclick="goHome()">← All tools</button>
+  <h2>UUID &amp; Random</h2><p class="tool-sub">Unique IDs and random numbers, on demand.</p>
+  <div class="controls" style="margin-top:0"><div class="field" style="flex:1"><label for="uuid-out">UUID v4</label><input type="text" id="uuid-out" readonly style="width:100%;font-family:'JetBrains Mono',monospace"></div></div>
+  <div class="action-row" style="margin-bottom:26px"><button class="primary-btn" onclick="genUUID()">Generate UUID</button><button class="ghost-btn" onclick="copyText(document.getElementById('uuid-out').value)">Copy</button></div>
+  <div class="controls">
+    <div class="field"><label for="rnd-min">Min</label><input type="number" id="rnd-min" value="1" style="width:110px"></div>
+    <div class="field"><label for="rnd-max">Max</label><input type="number" id="rnd-max" value="100" style="width:110px"></div>
+    <div class="field"><label for="rnd-out">Random number</label><input type="text" id="rnd-out" readonly style="width:140px;font-family:'JetBrains Mono',monospace;font-size:16px"></div>
+  </div>
+  <div class="action-row"><button class="primary-btn" onclick="genRandom()">Roll 🎲</button></div>
+</section>
+
+<section class="tool-view" id="tv-unitconv">
+  <button class="back-btn" onclick="goHome()">← All tools</button>
+  <h2>Unit Converter</h2><p class="tool-sub">Length, weight, temperature — type and it converts instantly.</p>
+  <div class="controls" style="margin-top:0">
+    <div class="field"><label for="uc-cat">Category</label><select id="uc-cat"><option value="length">Length</option><option value="weight">Weight</option><option value="temp">Temperature</option></select></div>
+    <div class="field"><label for="uc-val">Value</label><input type="number" id="uc-val" value="1" style="width:130px"></div>
+    <div class="field"><label for="uc-from">From</label><select id="uc-from"></select></div>
+    <div class="field"><label for="uc-to">To</label><select id="uc-to"></select></div>
+  </div>
+  <div class="stat-grid" style="grid-template-columns:1fr"><div class="stat"><div class="num" id="uc-out">—</div><div class="lab">Result</div></div></div>
+</section>
+
+<section class="tool-view" id="tv-invoice">
+  <button class="back-btn" onclick="goHome()">← All tools</button>
+  <h2>Invoice Generator</h2><p class="tool-sub">Fill in the details, add your items, download a clean PDF invoice.</p>
+  <div class="controls" style="margin-top:0">
+    <div class="field" style="flex:1;min-width:180px"><label for="inv-from">From (your name / business)</label><input type="text" id="inv-from" placeholder="Imran — Digestive Science" style="width:100%"></div>
+    <div class="field" style="flex:1;min-width:180px"><label for="inv-to">Bill to</label><input type="text" id="inv-to" placeholder="Client name" style="width:100%"></div>
+  </div>
+  <div class="controls">
+    <div class="field"><label for="inv-num">Invoice #</label><input type="text" id="inv-num" placeholder="INV-001" style="width:130px"></div>
+    <div class="field"><label for="inv-date">Date</label><input type="text" id="inv-date" placeholder="2026-07-19" style="width:150px"></div>
+    <div class="field"><label for="inv-curr">Currency</label><input type="text" id="inv-curr" value="$" style="width:70px"></div>
+    <div class="field"><label for="inv-tax">Tax %</label><input type="number" id="inv-tax" value="0" style="width:90px"></div>
+  </div>
+  <h3 style="margin:22px 0 8px;font-size:16px">Items</h3>
+  <div id="inv-items"></div>
+  <div class="action-row" style="margin-top:12px"><button class="ghost-btn" onclick="invAddRow()">+ Add item</button></div>
+  <div class="action-row"><button class="primary-btn" id="btn-invoice">Download invoice PDF</button></div>
+  <div class="result-box" id="rb-invoice"></div>
+</section>
+
+<section class="tool-view" id="tv-promptidea">
+  <button class="back-btn" onclick="goHome()">← All tools</button>
+  <h2>Prompt Ideas 🎲</h2><p class="tool-sub">Creative block? Roll the dice — a fresh prompt idea every time.</p>
+  <div class="action-row" style="margin-top:8px"><button class="primary-btn" onclick="rollPrompt()">Roll the dice 🎲</button><button class="ghost-btn" onclick="copyText(document.getElementById('pi-out').value)">Copy prompt</button></div>
+  <div class="field" style="margin-top:18px"><label for="pi-out">Your random prompt</label><textarea id="pi-out" readonly placeholder="Click the dice…"></textarea></div>
+  <p style="color:var(--muted);font-size:14px;margin-top:14px">Want hand-crafted prompts with real examples? Visit our gallery → <a href="https://lovelyprompts.app" target="_blank" rel="noopener"><b>lovelyprompts.app</b></a></p>
+</section>
+
 </main>
 
 <footer>
@@ -562,6 +857,7 @@ footer a{font-weight:700}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script>
 pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
 const { PDFDocument, degrees } = PDFLib;
@@ -777,6 +1073,203 @@ $("btn-pdftext").onclick=async()=>{
 };
 $("btn-pdftext-copy").onclick=()=>copyText($("pdftext-out").value);
 $("btn-pdftext-dl").onclick=()=>downloadBlob(new Blob([$("pdftext-out").value],{type:"text/plain"}),"extracted-text.txt");
+
+
+/* ---------- PDF to Word ---------- */
+setupDrop("pdf2doc");
+function xmlEsc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&apos;");}
+function linesFromContent(content){
+  const rows={};
+  content.items.forEach(it=>{
+    if(!it.str) return;
+    const y=Math.round(it.transform[5]);
+    let key=null;
+    for(const k of Object.keys(rows)){ if(Math.abs(Number(k)-y)<=2){key=k;break;} }
+    if(key===null){key=String(y);rows[key]=[];}
+    rows[key].push({x:it.transform[4],str:it.str});
+  });
+  return Object.keys(rows).map(Number).sort((a,b)=>b-a)
+    .map(y=>rows[String(y)].sort((a,b)=>a.x-b.x));
+}
+$("btn-pdf2doc").onclick=async()=>{
+  try{
+    const f=store.pdf2doc[0];
+    setProgress("pw-pdf2doc",0.05,"Opening PDF…");
+    const pdf=await pdfjsLib.getDocument({data:await f.arrayBuffer()}).promise;
+    let body="";
+    for(let i=1;i<=pdf.numPages;i++){
+      const content=await (await pdf.getPage(i)).getTextContent();
+      const lines=linesFromContent(content);
+      lines.forEach(cells=>{
+        const text=cells.map(c=>c.str).join(" ").trim();
+        body+='<w:p><w:r><w:t xml:space="preserve">'+xmlEsc(text)+'</w:t></w:r></w:p>';
+      });
+      if(i<pdf.numPages) body+='<w:p><w:r><w:br w:type="page"/></w:r></w:p>';
+      setProgress("pw-pdf2doc",i/pdf.numPages,"Page "+i+" of "+pdf.numPages);
+    }
+    const docXml='<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body>'+body+'<w:sectPr/></w:body></w:document>';
+    const zip=new JSZip();
+    zip.file("[Content_Types].xml",'<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/></Types>');
+    zip.folder("_rels").file(".rels",'<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>');
+    zip.folder("word").file("document.xml",docXml);
+    const blob=await zip.generateAsync({type:"blob",mimeType:"application/vnd.openxmlformats-officedocument.wordprocessingml.document"});
+    const base=f.name.replace(/\.pdf$/i,"");
+    showResult("rb-pdf2doc",pdf.numPages+" pages converted to Word",fmtSize(blob.size),blob,base+".docx");
+  }catch(e){ toast("Couldn't convert — is this a scanned PDF?"); console.error(e); }
+};
+
+/* ---------- PDF to Excel ---------- */
+setupDrop("pdf2xls");
+$("btn-pdf2xls").onclick=async()=>{
+  try{
+    const f=store.pdf2xls[0];
+    setProgress("pw-pdf2xls",0.05,"Opening PDF…");
+    const pdf=await pdfjsLib.getDocument({data:await f.arrayBuffer()}).promise;
+    const wb=XLSX.utils.book_new();
+    let totalRows=0;
+    for(let i=1;i<=pdf.numPages;i++){
+      const content=await (await pdf.getPage(i)).getTextContent();
+      const lines=linesFromContent(content);
+      const aoa=lines.map(cells=>cells.map(c=>c.str.trim()).filter(s=>s!==""));
+      totalRows+=aoa.length;
+      const ws=XLSX.utils.aoa_to_sheet(aoa.length?aoa:[[""]]);
+      XLSX.utils.book_append_sheet(wb,ws,"Page "+i);
+      setProgress("pw-pdf2xls",i/pdf.numPages,"Page "+i+" of "+pdf.numPages);
+    }
+    const out=XLSX.write(wb,{bookType:"xlsx",type:"array"});
+    const blob=new Blob([out],{type:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"});
+    const base=f.name.replace(/\.pdf$/i,"");
+    showResult("rb-pdf2xls",totalRows+" rows across "+pdf.numPages+" sheet"+(pdf.numPages>1?"s":""),fmtSize(blob.size),blob,base+".xlsx");
+  }catch(e){ toast("Couldn't convert — is this a scanned PDF?"); console.error(e); }
+};
+
+/* ---------- Fill & Edit PDF ---------- */
+let pfBytes=null, pfPdfJs=null, pfFieldInputs=[], pfStamps=[], pfCurPage=1;
+setupDrop("pdffill",{onChange:async files=>{
+  const ws=$("pf-workspace");
+  if(!files.length){ws.style.display="none";pfBytes=null;pfPdfJs=null;pfFieldInputs=[];pfStamps=[];return;}
+  try{
+    pfBytes=await files[0].arrayBuffer();
+    pfPdfJs=await pdfjsLib.getDocument({data:pfBytes.slice(0)}).promise;
+    $("pf-page").max=pfPdfJs.numPages;
+    $("pf-page").value=1; pfCurPage=1; pfStamps=[]; renderStampList();
+    await buildFormFields();
+    await renderFillPage(1);
+    ws.style.display="block";
+  }catch(e){ toast("Couldn't open this PDF"); console.error(e); }
+}});
+async function buildFormFields(){
+  const wrap=$("pf-fields"); wrap.innerHTML=""; pfFieldInputs=[];
+  try{
+    const doc=await PDFLib.PDFDocument.load(pfBytes.slice(0),{ignoreEncryption:true});
+    const form=doc.getForm();
+    const fields=form.getFields();
+    if(!fields.length){
+      wrap.innerHTML='<p style="color:var(--muted);font-size:14px">No fillable form fields found in this PDF — use "Add text" below instead.</p>';
+      return;
+    }
+    fields.forEach(fl=>{
+      const name=fl.getName(), type=fl.constructor.name;
+      const row=document.createElement("div"); row.className="field"; row.style.width="100%";
+      const label=document.createElement("label"); label.textContent=name; row.appendChild(label);
+      let input=null;
+      if(type==="PDFTextField"){
+        input=document.createElement("input"); input.type="text";
+        try{input.value=fl.getText()||"";}catch(e){}
+      } else if(type==="PDFCheckBox"){
+        input=document.createElement("select");
+        input.innerHTML='<option value="">— leave as is —</option><option value="check">☑ Checked</option><option value="uncheck">☐ Unchecked</option>';
+      } else if(type==="PDFDropdown"||type==="PDFRadioGroup"||type==="PDFOptionList"){
+        input=document.createElement("select");
+        input.innerHTML='<option value="">— leave as is —</option>';
+        try{ fl.getOptions().forEach(o=>{const op=document.createElement("option");op.value=o;op.textContent=o;input.appendChild(op);}); }catch(e){}
+      }
+      if(input){ row.appendChild(input); wrap.appendChild(row); pfFieldInputs.push({name,type,input}); }
+    });
+  }catch(e){
+    wrap.innerHTML='<p style="color:var(--muted);font-size:14px">Couldn\'t read form fields — you can still use "Add text" below.</p>';
+    console.error(e);
+  }
+}
+async function renderFillPage(n){
+  pfCurPage=n;
+  const page=await pfPdfJs.getPage(n);
+  const baseVp=page.getViewport({scale:1});
+  const scale=Math.min(680/baseVp.width,1.6);
+  const vp=page.getViewport({scale});
+  const cv=$("pf-canvas");
+  cv.width=vp.width; cv.height=vp.height;
+  await page.render({canvasContext:cv.getContext("2d"),viewport:vp}).promise;
+  drawStampMarkers();
+}
+function drawStampMarkers(){
+  const cv=$("pf-canvas"), ctx=cv.getContext("2d");
+  pfStamps.filter(s=>s.page===pfCurPage).forEach(s=>{
+    const x=s.xr*cv.width, y=s.yr*cv.height;
+    ctx.fillStyle="#C4356B";
+    ctx.font="700 "+Math.max(11,s.size)+"px sans-serif";
+    ctx.fillText(s.text,x,y);
+  });
+}
+$("pf-page").addEventListener("change",e=>{
+  let n=Math.max(1,Math.min(+e.target.value||1,pfPdfJs?pfPdfJs.numPages:1));
+  e.target.value=n;
+  if(pfPdfJs) renderFillPage(n);
+});
+$("pf-canvas").addEventListener("click",e=>{
+  const text=$("pf-text").value.trim();
+  if(!text){toast("Pehle text likho, phir page pe click karo");return;}
+  const cv=$("pf-canvas"), rect=cv.getBoundingClientRect();
+  const xr=(e.clientX-rect.left)/rect.width;
+  const yr=(e.clientY-rect.top)/rect.height;
+  pfStamps.push({page:pfCurPage,xr,yr,text,size:+$("pf-size").value||12});
+  drawStampMarkers(); renderStampList();
+});
+function renderStampList(){
+  const list=$("pf-stamps"); list.innerHTML="";
+  pfStamps.forEach((s,i)=>{
+    const row=document.createElement("div"); row.className="file-row";
+    row.innerHTML='<span>✎</span><span class="fname">"'+s.text+'" — page '+s.page+'</span>';
+    const rm=document.createElement("button"); rm.className="fremove"; rm.textContent="✕";
+    rm.onclick=()=>{pfStamps.splice(i,1);renderStampList();renderFillPage(pfCurPage);};
+    row.appendChild(rm); list.appendChild(row);
+  });
+}
+$("btn-pdffill").onclick=async()=>{
+  if(!pfBytes){toast("Add a PDF first");return;}
+  try{
+    const doc=await PDFLib.PDFDocument.load(pfBytes.slice(0),{ignoreEncryption:true});
+    /* form fields */
+    let filledCount=0;
+    try{
+      const form=doc.getForm();
+      pfFieldInputs.forEach(({name,type,input})=>{
+        const v=input.value;
+        try{
+          if(type==="PDFTextField"){ if(v!==""){form.getTextField(name).setText(v);filledCount++;} }
+          else if(type==="PDFCheckBox"){ if(v==="check"){form.getCheckBox(name).check();filledCount++;} else if(v==="uncheck"){form.getCheckBox(name).uncheck();filledCount++;} }
+          else if(type==="PDFDropdown"){ if(v){form.getDropdown(name).select(v);filledCount++;} }
+          else if(type==="PDFRadioGroup"){ if(v){form.getRadioGroup(name).select(v);filledCount++;} }
+          else if(type==="PDFOptionList"){ if(v){form.getOptionList(name).select(v);filledCount++;} }
+        }catch(e){console.error("field",name,e);}
+      });
+      try{form.updateFieldAppearances();}catch(e){}
+    }catch(e){}
+    /* text stamps */
+    if(pfStamps.length){
+      const font=await doc.embedFont(PDFLib.StandardFonts.Helvetica);
+      pfStamps.forEach(s=>{
+        const p=doc.getPage(s.page-1);
+        const {width,height}=p.getSize();
+        p.drawText(s.text,{x:s.xr*width,y:height-(s.yr*height),size:s.size,font,color:PDFLib.rgb(0,0,0)});
+      });
+    }
+    if(!filledCount && !pfStamps.length){toast("Kuch bhara nahi — fields ya text add karo pehle");return;}
+    const blob=new Blob([await doc.save()],{type:"application/pdf"});
+    const base=store.pdffill[0].name.replace(/\.pdf$/i,"");
+    showResult("rb-pdffill",(filledCount?filledCount+" field(s) filled":"")+(filledCount&&pfStamps.length?" + ":"")+(pfStamps.length?pfStamps.length+" text added":""),fmtSize(blob.size),blob,base+"-filled.pdf");
+  }catch(e){ toast("Couldn't save this PDF"); console.error(e); }
+};
 
 /* ---------- image tools ---------- */
 function loadImage(file){ return new Promise((res,rej)=>{ const img=new Image(); img.onload=()=>res(img); img.onerror=rej; img.src=URL.createObjectURL(file); }); }
@@ -1015,6 +1508,428 @@ function b64(mode){
     else out.value=decodeURIComponent(escape(atob(inp.trim())));
   }catch(e){ out.value=""; toast(mode==="enc"?"Couldn't encode that text":"That doesn't look like valid Base64"); }
 }
+
+/* ================= NEW TOOLS BATCH 2 ================= */
+
+/* ---- Watermark PDF ---- */
+setupDrop("pdfwm");
+$("wm-op").oninput=e=>$("wm-opv").textContent=e.target.value;
+$("btn-pdfwm").onclick=async()=>{
+  try{
+    const f=store.pdfwm[0], text=$("wm-text").value.trim()||"DRAFT", op=+$("wm-op").value/100;
+    const doc=await PDFLib.PDFDocument.load(await f.arrayBuffer(),{ignoreEncryption:true});
+    const font=await doc.embedFont(PDFLib.StandardFonts.HelveticaBold);
+    doc.getPages().forEach(p=>{
+      const {width,height}=p.getSize();
+      const size=Math.min(width,height)/text.length*1.6+10;
+      const tw=font.widthOfTextAtSize(text,size);
+      p.drawText(text,{x:width/2-tw/2*Math.cos(Math.PI/4)-(height/2)*0+width*0.08,y:height/2-tw/2*Math.sin(Math.PI/4)+height*0.02,size,font,color:PDFLib.rgb(0.5,0.5,0.5),opacity:op,rotate:PDFLib.degrees(45)});
+    });
+    const blob=new Blob([await doc.save()],{type:"application/pdf"});
+    showResult("rb-pdfwm",'Watermark "'+text+'" added to '+doc.getPageCount()+' pages',fmtSize(blob.size),blob,f.name.replace(/\.pdf$/i,"")+"-watermarked.pdf");
+  }catch(e){toast("Couldn't watermark this PDF");console.error(e);}
+};
+
+/* ---- Page Numbers ---- */
+setupDrop("pdfnum");
+$("btn-pdfnum").onclick=async()=>{
+  try{
+    const f=store.pdfnum[0], style=$("num-style").value;
+    const doc=await PDFLib.PDFDocument.load(await f.arrayBuffer(),{ignoreEncryption:true});
+    const font=await doc.embedFont(PDFLib.StandardFonts.Helvetica);
+    const total=doc.getPageCount();
+    doc.getPages().forEach((p,i)=>{
+      const {width}=p.getSize();
+      const label=style==="of"?(i+1)+" of "+total:style==="dash"?"— "+(i+1)+" —":String(i+1);
+      const tw=font.widthOfTextAtSize(label,10);
+      p.drawText(label,{x:width/2-tw/2,y:22,size:10,font,color:PDFLib.rgb(0.35,0.35,0.35)});
+    });
+    const blob=new Blob([await doc.save()],{type:"application/pdf"});
+    showResult("rb-pdfnum","Page numbers added to "+total+" pages",fmtSize(blob.size),blob,f.name.replace(/\.pdf$/i,"")+"-numbered.pdf");
+  }catch(e){toast("Couldn't number this PDF");console.error(e);}
+};
+
+/* ---- Delete Pages ---- */
+setupDrop("pdfdel");
+$("btn-pdfdel").onclick=async()=>{
+  try{
+    const f=store.pdfdel[0];
+    const src=await PDFLib.PDFDocument.load(await f.arrayBuffer(),{ignoreEncryption:true});
+    const del=new Set(parseRanges($("del-range").value,src.getPageCount()));
+    if(!del.size){toast("Enter pages to delete, e.g. 2, 5-7");return;}
+    const keep=src.getPageIndices().filter(i=>!del.has(i));
+    if(!keep.length){toast("Can't delete every page!");return;}
+    const out=await PDFLib.PDFDocument.create();
+    (await out.copyPages(src,keep)).forEach(p=>out.addPage(p));
+    const blob=new Blob([await out.save()],{type:"application/pdf"});
+    showResult("rb-pdfdel",del.size+" page(s) deleted — "+keep.length+" remain",fmtSize(blob.size),blob,f.name.replace(/\.pdf$/i,"")+"-edited.pdf");
+  }catch(e){toast("Couldn't edit this PDF");console.error(e);}
+};
+
+/* ---- Reorder Pages ---- */
+let orderArr=[];
+setupDrop("pdforder",{onChange:async files=>{
+  const list=$("order-list"); list.innerHTML=""; orderArr=[];
+  if(!files.length)return;
+  try{
+    const src=await PDFLib.PDFDocument.load(await files[0].arrayBuffer(),{ignoreEncryption:true});
+    orderArr=src.getPageIndices();
+    renderOrder();
+  }catch(e){toast("Couldn't open this PDF");console.error(e);}
+}});
+function renderOrder(){
+  const list=$("order-list"); list.innerHTML="";
+  orderArr.forEach((orig,pos)=>{
+    const row=document.createElement("div"); row.className="file-row";
+    row.innerHTML='<span>📄</span><span class="fname">Page '+(orig+1)+'</span>';
+    const up=document.createElement("button"); up.className="fremove"; up.textContent="↑";
+    up.onclick=()=>{if(pos>0){[orderArr[pos-1],orderArr[pos]]=[orderArr[pos],orderArr[pos-1]];renderOrder();}};
+    const dn=document.createElement("button"); dn.className="fremove"; dn.textContent="↓";
+    dn.onclick=()=>{if(pos<orderArr.length-1){[orderArr[pos+1],orderArr[pos]]=[orderArr[pos],orderArr[pos+1]];renderOrder();}};
+    row.appendChild(up); row.appendChild(dn); list.appendChild(row);
+  });
+}
+$("btn-pdforder").onclick=async()=>{
+  try{
+    const f=store.pdforder[0];
+    const src=await PDFLib.PDFDocument.load(await f.arrayBuffer(),{ignoreEncryption:true});
+    const out=await PDFLib.PDFDocument.create();
+    (await out.copyPages(src,orderArr)).forEach(p=>out.addPage(p));
+    const blob=new Blob([await out.save()],{type:"application/pdf"});
+    showResult("rb-pdforder","Pages reordered",fmtSize(blob.size),blob,f.name.replace(/\.pdf$/i,"")+"-reordered.pdf");
+  }catch(e){toast("Couldn't reorder this PDF");console.error(e);}
+};
+
+/* ---- Crop Image ---- */
+let cropImg=null, cropSel=null, cropDrag=null;
+setupDrop("imgcrop",{onChange:async files=>{
+  const cv=$("crop-canvas");
+  if(!files.length){cropImg=null;cv.style.display="none";$("btn-cropreset").style.display="none";return;}
+  cropImg=await loadImage(files[0]); cropSel=null;
+  const scale=Math.min(660/cropImg.width,1);
+  cv.width=cropImg.width*scale; cv.height=cropImg.height*scale;
+  cv.dataset.scale=scale;
+  cv.style.display="block"; $("btn-cropreset").style.display="inline-block";
+  drawCrop();
+}});
+function drawCrop(){
+  const cv=$("crop-canvas"), ctx=cv.getContext("2d");
+  ctx.drawImage(cropImg,0,0,cv.width,cv.height);
+  if(cropSel){
+    ctx.fillStyle="rgba(0,0,0,.45)";
+    ctx.fillRect(0,0,cv.width,cv.height);
+    const {x,y,w,h}=cropSel;
+    ctx.drawImage(cropImg, x/cv.dataset.scale, y/cv.dataset.scale, w/cv.dataset.scale, h/cv.dataset.scale, x, y, w, h);
+    ctx.strokeStyle="#C4356B"; ctx.lineWidth=2; ctx.strokeRect(x,y,w,h);
+  }
+}
+function cvPos(e){const r=$("crop-canvas").getBoundingClientRect();const cv=$("crop-canvas");return{x:(e.clientX-r.left)*(cv.width/r.width),y:(e.clientY-r.top)*(cv.height/r.height)};}
+$("crop-canvas").addEventListener("mousedown",e=>{if(!cropImg)return;const p=cvPos(e);cropDrag=p;cropSel={x:p.x,y:p.y,w:0,h:0};});
+$("crop-canvas").addEventListener("mousemove",e=>{
+  if(!cropDrag)return;const p=cvPos(e);
+  cropSel={x:Math.min(cropDrag.x,p.x),y:Math.min(cropDrag.y,p.y),w:Math.abs(p.x-cropDrag.x),h:Math.abs(p.y-cropDrag.y)};
+  drawCrop();
+});
+window.addEventListener("mouseup",()=>{cropDrag=null;});
+$("btn-cropreset").onclick=()=>{cropSel=null;drawCrop();};
+$("btn-imgcrop").onclick=async()=>{
+  if(!cropImg){toast("Add an image first");return;}
+  if(!cropSel||cropSel.w<4||cropSel.h<4){toast("Pehle preview pe drag kar ke area select karo");return;}
+  const s=+$("crop-canvas").dataset.scale;
+  const sx=cropSel.x/s, sy=cropSel.y/s, sw=cropSel.w/s, sh=cropSel.h/s;
+  const out=document.createElement("canvas"); out.width=Math.round(sw); out.height=Math.round(sh);
+  out.getContext("2d").drawImage(cropImg,sx,sy,sw,sh,0,0,out.width,out.height);
+  const type=store.imgcrop[0].type==="image/png"?"image/png":"image/jpeg";
+  const blob=await new Promise(r=>out.toBlob(r,type,0.92));
+  showResult("rb-imgcrop","Cropped to "+out.width+" × "+out.height+" px",fmtSize(blob.size),blob,"cropped."+(type==="image/png"?"png":"jpg"));
+};
+
+/* ---- Watermark Image ---- */
+setupDrop("imgwm");
+$("iwm-op").oninput=e=>$("iwm-opv").textContent=e.target.value;
+$("btn-imgwm").onclick=async()=>{
+  const f=store.imgwm[0], text=$("iwm-text").value.trim();
+  if(!text){toast("Watermark text likho pehle");return;}
+  const img=await loadImage(f);
+  const cv=document.createElement("canvas"); cv.width=img.width; cv.height=img.height;
+  const ctx=cv.getContext("2d"); ctx.drawImage(img,0,0);
+  const size=Math.max(16,Math.round(img.width/22));
+  ctx.font="700 "+size+"px sans-serif";
+  ctx.globalAlpha=+$("iwm-op").value/100;
+  ctx.fillStyle="#ffffff"; ctx.strokeStyle="rgba(0,0,0,.55)"; ctx.lineWidth=Math.max(1,size/14);
+  const pad=size, tw=ctx.measureText(text).width, pos=$("iwm-pos").value;
+  let x=pad,y=img.height-pad;
+  if(pos==="br"){x=img.width-tw-pad;y=img.height-pad;}
+  else if(pos==="bl"){x=pad;y=img.height-pad;}
+  else if(pos==="tr"){x=img.width-tw-pad;y=pad+size;}
+  else if(pos==="tl"){x=pad;y=pad+size;}
+  else{x=img.width/2-tw/2;y=img.height/2;}
+  ctx.strokeText(text,x,y); ctx.fillText(text,x,y);
+  ctx.globalAlpha=1;
+  const blob=await new Promise(r=>cv.toBlob(r,"image/jpeg",0.92));
+  const pv=$("pv-imgwm"); pv.src=URL.createObjectURL(blob); pv.style.display="block";
+  showResult("rb-imgwm","Watermark added",fmtSize(blob.size),blob,"watermarked.jpg");
+};
+
+/* ---- Meme Generator ---- */
+setupDrop("meme");
+function memeLine(ctx,text,cx,y,maxW){
+  ctx.textAlign="center";
+  ctx.strokeText(text,cx,y,maxW); ctx.fillText(text,cx,y,maxW);
+}
+$("btn-meme").onclick=async()=>{
+  const f=store.meme[0];
+  const top=$("meme-top").value.trim().toUpperCase(), bottom=$("meme-bottom").value.trim().toUpperCase();
+  if(!top&&!bottom){toast("Kuch text to likho meme ke liye 😄");return;}
+  const img=await loadImage(f);
+  const cv=document.createElement("canvas"); cv.width=img.width; cv.height=img.height;
+  const ctx=cv.getContext("2d"); ctx.drawImage(img,0,0);
+  const size=Math.round(img.width/10);
+  ctx.font="900 "+size+"px Impact, 'Arial Black', sans-serif";
+  ctx.fillStyle="#fff"; ctx.strokeStyle="#000"; ctx.lineWidth=Math.max(2,size/12); ctx.lineJoin="round";
+  if(top) memeLine(ctx,top,img.width/2,size*1.15,img.width*0.94);
+  if(bottom) memeLine(ctx,bottom,img.width/2,img.height-size*0.4,img.width*0.94);
+  const blob=await new Promise(r=>cv.toBlob(r,"image/jpeg",0.92));
+  const pv=$("pv-meme"); pv.src=URL.createObjectURL(blob); pv.style.display="block";
+  showResult("rb-meme","Meme ready — go forth and post",fmtSize(blob.size),blob,"meme.jpg");
+};
+
+/* ---- Favicon Generator ---- */
+setupDrop("favicon");
+$("btn-favicon").onclick=async()=>{
+  try{
+    const f=store.favicon[0];
+    const img=await loadImage(f);
+    const sizes=[16,32,48,64,180,192,512];
+    const zip=new JSZip();
+    for(const s of sizes){
+      const cv=document.createElement("canvas"); cv.width=s; cv.height=s;
+      const ctx=cv.getContext("2d");
+      const side=Math.min(img.width,img.height);
+      ctx.drawImage(img,(img.width-side)/2,(img.height-side)/2,side,side,0,0,s,s);
+      const blob=await new Promise(r=>cv.toBlob(r,"image/png"));
+      zip.file("favicon-"+s+"x"+s+".png",blob);
+    }
+    zip.file("README.txt","Add to your <head>:\n<link rel=\"icon\" href=\"favicon-32x32.png\" sizes=\"32x32\">\n<link rel=\"apple-touch-icon\" href=\"favicon-180x180.png\">\n\nMade free at lovelyfiles.com");
+    const zblob=await zip.generateAsync({type:"blob"});
+    showResult("rb-favicon",sizes.length+" favicon sizes generated",fmtSize(zblob.size)+" ZIP",zblob,"favicons.zip");
+  }catch(e){toast("Couldn't generate favicons");console.error(e);}
+};
+
+/* ---- Color Picker ---- */
+let cpImg=null;
+setupDrop("colorpick",{onChange:async files=>{
+  const cv=$("cp-canvas");
+  if(!files.length){cpImg=null;cv.style.display="none";$("cp-result").style.display="none";return;}
+  cpImg=await loadImage(files[0]);
+  const scale=Math.min(660/cpImg.width,1);
+  cv.width=cpImg.width*scale; cv.height=cpImg.height*scale;
+  cv.getContext("2d").drawImage(cpImg,0,0,cv.width,cv.height);
+  cv.style.display="block";
+}});
+$("cp-canvas").addEventListener("click",e=>{
+  if(!cpImg)return;
+  const cv=$("cp-canvas"), r=cv.getBoundingClientRect();
+  const x=Math.round((e.clientX-r.left)*(cv.width/r.width));
+  const y=Math.round((e.clientY-r.top)*(cv.height/r.height));
+  const d=cv.getContext("2d").getImageData(x,y,1,1).data;
+  const hex="#"+[d[0],d[1],d[2]].map(v=>v.toString(16).padStart(2,"0")).join("").toUpperCase();
+  $("cp-hex").value=hex;
+  $("cp-rgb").value="rgb("+d[0]+", "+d[1]+", "+d[2]+")";
+  $("cp-swatch").style.background=hex;
+  $("cp-result").style.display="flex";
+});
+
+/* ---- Text Cleaner ---- */
+function cleanText(){
+  const el=$("tc-in"); let lines=el.value.split("\n");
+  if($("tc-trim").checked) lines=lines.map(l=>l.trim());
+  if($("tc-spaces").checked) lines=lines.map(l=>l.replace(/[ \t]{2,}/g," "));
+  if($("tc-empty").checked) lines=lines.filter(l=>l!=="");
+  if($("tc-dupes").checked){const seen=new Set();lines=lines.filter(l=>{if(seen.has(l))return false;seen.add(l);return true;});}
+  el.value=lines.join("\n");
+  toast("Text saaf ho gaya ✨");
+}
+
+/* ---- Markdown ---- */
+function mdRender(src){
+  let h=src.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  h=h.replace(/^### (.*)$/gm,"<h3>$1</h3>").replace(/^## (.*)$/gm,"<h2>$1</h2>").replace(/^# (.*)$/gm,"<h1>$1</h1>");
+  h=h.replace(/\*\*([^*]+)\*\*/g,"<b>$1</b>").replace(/\*([^*]+)\*/g,"<i>$1</i>");
+  h=h.replace(/`([^`]+)`/g,'<code style="background:var(--blush);padding:2px 6px;border-radius:6px;font-family:JetBrains Mono,monospace;font-size:.9em">$1</code>');
+  h=h.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>');
+  h=h.replace(/^(?:- (.*)(?:\n|$))+/gm,m=>"<ul>"+m.trim().split("\n").map(l=>"<li>"+l.replace(/^- /,"")+"</li>").join("")+"</ul>");
+  h=h.split(/\n{2,}/).map(b=>/^<(h\d|ul)/.test(b.trim())?b:"<p>"+b.replace(/\n/g,"<br>")+"</p>").join("");
+  return h;
+}
+$("md-in").addEventListener("input",()=>{$("md-out").innerHTML=mdRender($("md-in").value);});
+
+/* ---- Text to Speech ---- */
+function loadVoices(){
+  const sel=$("tts-voice"); if(!sel)return;
+  const voices=speechSynthesis.getVoices();
+  sel.innerHTML="";
+  voices.forEach((v,i)=>{const o=document.createElement("option");o.value=i;o.textContent=v.name+" ("+v.lang+")";sel.appendChild(o);});
+}
+if("speechSynthesis" in window){loadVoices();speechSynthesis.onvoiceschanged=loadVoices;}
+$("tts-rate").oninput=e=>$("tts-ratev").textContent=(+e.target.value).toFixed(1);
+function ttsPlay(){
+  const text=$("tts-in").value.trim();
+  if(!text){toast("Pehle kuch text likho");return;}
+  speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);
+  const voices=speechSynthesis.getVoices();
+  const idx=+$("tts-voice").value;
+  if(voices[idx]) u.voice=voices[idx];
+  u.rate=+$("tts-rate").value;
+  speechSynthesis.speak(u);
+}
+
+/* ---- URL enc/dec ---- */
+function urlConv(mode){
+  const inp=$("url-in").value, out=$("url-out");
+  try{ out.value=mode==="enc"?encodeURIComponent(inp):decodeURIComponent(inp); }
+  catch(e){ out.value=""; toast("Ye valid encoded text nahi lagta"); }
+}
+
+/* ---- JSON formatter ---- */
+function jsonFmt(indent){
+  const inp=$("json-in").value.trim(), out=$("json-out");
+  if(!inp){toast("Pehle JSON paste karo");return;}
+  try{ out.value=JSON.stringify(JSON.parse(inp),null,indent||0); toast(indent?"Formatted ✨":"Minified"); }
+  catch(e){ out.value=""; toast("Invalid JSON: "+e.message.slice(0,60)); }
+}
+
+/* ---- Password gen ---- */
+$("pg-len").oninput=e=>$("pg-lenv").textContent=e.target.value;
+function genPass(){
+  let chars="";
+  if($("pg-upper").checked)chars+="ABCDEFGHJKLMNPQRSTUVWXYZ";
+  if($("pg-lower").checked)chars+="abcdefghijkmnopqrstuvwxyz";
+  if($("pg-digits").checked)chars+="23456789";
+  if($("pg-symbols").checked)chars+="!@#$%^&*-_=+?";
+  if(!chars){toast("Kam az kam ek option select karo");return;}
+  const len=+$("pg-len").value;
+  const arr=new Uint32Array(len); crypto.getRandomValues(arr);
+  $("pg-out").value=[...arr].map(n=>chars[n%chars.length]).join("");
+}
+
+/* ---- UUID & random ---- */
+function genUUID(){ $("uuid-out").value=crypto.randomUUID(); }
+function genRandom(){
+  const min=Math.ceil(+$("rnd-min").value), max=Math.floor(+$("rnd-max").value);
+  if(isNaN(min)||isNaN(max)||max<min){toast("Min aur Max sahi dalo");return;}
+  $("rnd-out").value=Math.floor(Math.random()*(max-min+1))+min;
+}
+
+/* ---- Unit converter ---- */
+const UNITS={
+  length:{m:1,cm:0.01,mm:0.001,km:1000,inch:0.0254,ft:0.3048,yd:0.9144,mile:1609.344},
+  weight:{kg:1,g:0.001,lb:0.45359237,oz:0.0283495,tonne:1000}
+};
+function ucFill(){
+  const cat=$("uc-cat").value, from=$("uc-from"), to=$("uc-to");
+  from.innerHTML=""; to.innerHTML="";
+  const opts=cat==="temp"?["°C","°F","K"]:Object.keys(UNITS[cat]);
+  opts.forEach(u=>{from.add(new Option(u,u));to.add(new Option(u,u));});
+  to.selectedIndex=1;
+  ucCalc();
+}
+function ucCalc(){
+  const cat=$("uc-cat").value, v=parseFloat($("uc-val").value);
+  if(isNaN(v)){$("uc-out").textContent="—";return;}
+  const f=$("uc-from").value, t=$("uc-to").value;
+  let res;
+  if(cat==="temp"){
+    let c = f==="°C"?v : f==="°F"?(v-32)*5/9 : v-273.15;
+    res = t==="°C"?c : t==="°F"?c*9/5+32 : c+273.15;
+  } else {
+    res = v*UNITS[cat][f]/UNITS[cat][t];
+  }
+  $("uc-out").textContent=(Math.round(res*10000)/10000)+" "+t;
+}
+$("uc-cat").addEventListener("change",ucFill);
+["uc-val","uc-from","uc-to"].forEach(id=>$(id).addEventListener("input",ucCalc));
+ucFill();
+
+/* ---- Invoice ---- */
+function invAddRow(desc,qty,price){
+  const wrap=$("inv-items");
+  const row=document.createElement("div"); row.className="controls"; row.style.marginTop="8px";
+  row.innerHTML='<div class="field" style="flex:1;min-width:160px"><input type="text" class="inv-desc" placeholder="Description" style="width:100%" value="'+(desc||"")+'"></div>'
+    +'<div class="field"><input type="number" class="inv-qty" placeholder="Qty" value="'+(qty||1)+'" min="0" style="width:80px"></div>'
+    +'<div class="field"><input type="number" class="inv-price" placeholder="Price" value="'+(price||"")+'" min="0" step="0.01" style="width:110px"></div>';
+  const rm=document.createElement("button"); rm.className="fremove"; rm.textContent="✕"; rm.style.alignSelf="center";
+  rm.onclick=()=>row.remove();
+  row.appendChild(rm); wrap.appendChild(row);
+}
+invAddRow();
+$("btn-invoice").onclick=async()=>{
+  try{
+    const from=$("inv-from").value.trim()||"Your Business";
+    const to=$("inv-to").value.trim()||"Client";
+    const num=$("inv-num").value.trim()||"INV-001";
+    const date=$("inv-date").value.trim()||new Date().toISOString().slice(0,10);
+    const curr=$("inv-curr").value.trim()||"$";
+    const taxPct=parseFloat($("inv-tax").value)||0;
+    const items=[...document.querySelectorAll("#inv-items .controls")].map(r=>({
+      desc:r.querySelector(".inv-desc").value.trim(),
+      qty:parseFloat(r.querySelector(".inv-qty").value)||0,
+      price:parseFloat(r.querySelector(".inv-price").value)||0
+    })).filter(it=>it.desc);
+    if(!items.length){toast("Kam az kam ek item add karo");return;}
+    const doc=await PDFLib.PDFDocument.create();
+    const page=doc.addPage([595,842]);
+    const font=await doc.embedFont(PDFLib.StandardFonts.Helvetica);
+    const bold=await doc.embedFont(PDFLib.StandardFonts.HelveticaBold);
+    const berry=PDFLib.rgb(0.77,0.21,0.42), ink=PDFLib.rgb(0.16,0.12,0.18), gray=PDFLib.rgb(0.45,0.42,0.46);
+    let y=790;
+    page.drawText("INVOICE",{x:50,y,size:30,font:bold,color:berry}); 
+    page.drawText(num,{x:50,y:y-22,size:11,font,color:gray});
+    page.drawText("Date: "+date,{x:430,y:y-22,size:11,font,color:gray});
+    y-=70;
+    page.drawText("From",{x:50,y,size:9,font:bold,color:gray});
+    page.drawText(from,{x:50,y:y-16,size:12,font:bold,color:ink});
+    page.drawText("Bill To",{x:320,y,size:9,font:bold,color:gray});
+    page.drawText(to,{x:320,y:y-16,size:12,font:bold,color:ink});
+    y-=60;
+    page.drawRectangle({x:50,y:y-6,width:495,height:24,color:PDFLib.rgb(0.98,0.93,0.95)});
+    page.drawText("Description",{x:58,y,size:10,font:bold,color:ink});
+    page.drawText("Qty",{x:370,y,size:10,font:bold,color:ink});
+    page.drawText("Price",{x:420,y,size:10,font:bold,color:ink});
+    page.drawText("Total",{x:490,y,size:10,font:bold,color:ink});
+    y-=28;
+    let subtotal=0;
+    items.forEach(it=>{
+      const line=it.qty*it.price; subtotal+=line;
+      page.drawText(it.desc.slice(0,52),{x:58,y,size:10,font,color:ink});
+      page.drawText(String(it.qty),{x:370,y,size:10,font,color:ink});
+      page.drawText(curr+it.price.toFixed(2),{x:420,y,size:10,font,color:ink});
+      page.drawText(curr+line.toFixed(2),{x:490,y,size:10,font,color:ink});
+      y-=20;
+      if(y<120){y=780;doc.addPage([595,842]);}
+    });
+    y-=10;
+    const tax=subtotal*taxPct/100, total=subtotal+tax;
+    page.drawText("Subtotal: "+curr+subtotal.toFixed(2),{x:400,y,size:11,font,color:ink}); y-=18;
+    if(taxPct>0){page.drawText("Tax ("+taxPct+"%): "+curr+tax.toFixed(2),{x:400,y,size:11,font,color:ink}); y-=18;}
+    page.drawText("TOTAL: "+curr+total.toFixed(2),{x:400,y,size:14,font:bold,color:berry});
+    page.drawText("Generated free at lovelyfiles.com",{x:50,y:40,size:8,font,color:gray});
+    const blob=new Blob([await doc.save()],{type:"application/pdf"});
+    showResult("rb-invoice","Invoice "+num+" — total "+curr+total.toFixed(2),fmtSize(blob.size),blob,num+".pdf");
+  }catch(e){toast("Couldn't build the invoice");console.error(e);}
+};
+
+/* ---- Prompt Ideas ---- */
+const PI_SUBJECT=["a wise old lighthouse keeper","a sleepy ragdoll cat","a street food vendor at dawn","an ancient library hidden in a tree","a husky puppy discovering snow","a tiny robot watering plants","a grandmother teaching calligraphy","a floating market on a misty river","a falcon landing on a gloved hand","a potter shaping clay in a sunlit studio","a night train crossing a snowy valley","a coral reef city of glass towers","a chai stall glowing in monsoon rain","a knight polishing armor before dawn","a hot air balloon festival at sunrise"];
+const PI_STYLE=["photorealistic, shot on 85mm lens","painted in soft watercolor washes","as polished 3D clay-render art","in vibrant anime style","as dark fantasy concept art","in warm vintage film photography style","as a minimal flat vector illustration","in dramatic cinematic style with film grain"];
+const PI_LIGHT=["golden hour sunlight","soft overcast light","neon night glow","candlelit warmth","dramatic rim lighting","misty morning light"];
+const PI_MOOD=["peaceful and nostalgic","epic and awe-inspiring","cozy and intimate","mysterious and quiet","joyful and vibrant"];
+function rollPrompt(){
+  const r=a=>a[Math.floor(Math.random()*a.length)];
+  $("pi-out").value=r(PI_SUBJECT)+", "+r(PI_STYLE)+", "+r(PI_LIGHT)+", "+r(PI_MOOD)+", highly detailed, professional composition";
+}
+
 </script>
 </body>
 </html>
