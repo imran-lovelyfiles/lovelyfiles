@@ -204,6 +204,26 @@ textarea{width:100%;min-height:150px;resize:vertical;line-height:1.55}
 .qr-out{margin-top:22px;display:flex;justify-content:center;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
 .preview-img{max-width:100%;border:1px solid var(--line);border-radius:12px;margin-top:18px;display:none}
 
+
+.sister-card{
+  display:block;text-decoration:none;color:inherit;
+  background:linear-gradient(135deg,var(--plum),var(--berry-deep));
+  border:none;padding:0;
+}
+.sister-card::after{display:none}
+.sister-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift)}
+.sister-inner{
+  padding:26px 28px;display:flex;flex-wrap:wrap;gap:18px;
+  align-items:center;justify-content:space-between;color:#fff;
+}
+.sister-inner h3{font-size:19px;font-weight:800;margin-bottom:6px;color:#fff}
+.sister-inner p{font-size:14.5px;color:rgba(255,255,255,.9);max-width:640px;line-height:1.55}
+.sister-cta{
+  flex:none;background:rgba(255,255,255,.16);border-radius:999px;
+  padding:11px 22px;font-weight:800;font-size:14.5px;white-space:nowrap;
+}
+.sister-card:hover .sister-cta{background:rgba(255,255,255,.28)}
+
 /* ---------- About / footer ---------- */
 .about{
   max-width:1120px;margin:60px auto 0;padding:0 24px;
@@ -267,12 +287,16 @@ footer a{font-weight:700}
 
   <main>
     <section class="tool-section" id="creator-tools">
-      <div class="section-head"><h2>AI Prompt Tools</h2><span class="count">03 tools · our specialty</span></div>
-      <div class="grid">
-        <button class="tool-card" onclick="showTool('imgprompt')"><div class="tool-icon ic-util">✦</div><h3>Image Prompt Builder</h3><p>Describe your idea, pick a style — get a detailed, professional prompt for Midjourney, DALL-E, Flux and more.</p></button>
-        <button class="tool-card" onclick="showTool('vidprompt')"><div class="tool-icon ic-util">🎬</div><h3>Video Prompt Builder</h3><p>Build cinematic shot prompts for Seedance, Veo, Kling and Runway — camera moves, lighting, the works.</p></button>
-        <button class="tool-card" onclick="showTool('promptidea')"><div class="tool-icon ic-util">🎲</div><h3>Prompt Ideas</h3><p>Stuck? Roll the dice and get a fresh, random prompt idea to spark you.</p></button>
-      </div>
+      <div class="section-head"><h2>AI Prompt Tools</h2><span class="count">our sister site</span></div>
+      <a class="tool-card sister-card" href="https://lovelyprompts.app" target="_blank" rel="noopener">
+        <div class="sister-inner">
+          <div>
+            <h3>Building AI prompts? We made a whole site for that.</h3>
+            <p>A free gallery of hand-crafted image prompts with real examples — plus prompt builders for Midjourney, Nano Banana, GPT Image, Seedance and more.</p>
+          </div>
+          <span class="sister-cta">lovelyprompts.app →</span>
+        </div>
+      </a>
     </section>
 
     <section class="tool-section" id="pdf-tools">
@@ -556,42 +580,6 @@ footer a{font-weight:700}
   </div>
 </section>
 
-<section class="tool-view" id="tv-imgprompt">
-  <button class="back-btn" onclick="goHome()">← All tools</button>
-  <h2>Image Prompt Builder</h2><p class="tool-sub">Describe your idea, choose the look — we'll write a detailed, generation-ready prompt.</p>
-  <div class="controls" style="display:block">
-    <div class="field" style="margin-bottom:14px"><label for="ip-subject">Your idea (subject &amp; scene)</label><input type="text" id="ip-subject" placeholder="e.g. a fluffy ragdoll cat sitting on a bookshelf" style="width:100%"></div>
-    <div class="controls" style="margin-top:0">
-      <div class="field"><label for="ip-platform">Platform</label><select id="ip-platform"><option>Midjourney</option><option>DALL-E</option><option>Flux</option><option>Nano Banana</option><option value="Generic">Any / Generic</option></select></div>
-      <div class="field"><label for="ip-style">Style</label><select id="ip-style"><option>Photorealistic</option><option>Cinematic</option><option>3D Pixar-style animation</option><option>Anime</option><option>Watercolor painting</option><option>Oil painting</option><option>Flat vector illustration</option><option>Dark fantasy art</option><option>Studio product shot</option></select></div>
-      <div class="field"><label for="ip-light">Lighting</label><select id="ip-light"><option>Golden hour sunlight</option><option>Soft studio softbox</option><option>Dramatic rim lighting</option><option>Neon night glow</option><option>Overcast natural light</option><option>Candlelit warm ambience</option><option>Bright daylight</option></select></div>
-      <div class="field"><label for="ip-shot">Framing</label><select id="ip-shot"><option>Close-up portrait</option><option>Medium shot</option><option>Wide establishing shot</option><option>Macro detail</option><option>Aerial top-down view</option><option>Low-angle hero shot</option></select></div>
-      <div class="field"><label for="ip-mood">Mood</label><select id="ip-mood"><option>Warm and cozy</option><option>Epic and dramatic</option><option>Calm and minimal</option><option>Playful and colorful</option><option>Mysterious and moody</option><option>Luxurious and elegant</option></select></div>
-      <div class="field"><label for="ip-ar">Aspect ratio</label><select id="ip-ar"><option value="16:9">16:9 landscape</option><option value="9:16">9:16 vertical</option><option value="1:1">1:1 square</option><option value="4:5">4:5 portrait</option><option value="21:9">21:9 ultrawide</option></select></div>
-    </div>
-    <div class="action-row"><button class="primary-btn" onclick="buildImgPrompt()">Generate prompt</button><button class="ghost-btn" onclick="copyText(document.getElementById('ip-out').value)">Copy prompt</button></div>
-    <div class="field" style="margin-top:18px"><label for="ip-out">Your prompt</label><textarea id="ip-out" readonly placeholder="Your detailed prompt will appear here…"></textarea></div>
-  </div>
-</section>
-
-<section class="tool-view" id="tv-vidprompt">
-  <button class="back-btn" onclick="goHome()">← All tools</button>
-  <h2>Video Prompt Builder</h2><p class="tool-sub">Build a cinematic, shot-ready prompt with camera movement, lighting and audio cues.</p>
-  <div class="controls" style="display:block">
-    <div class="field" style="margin-bottom:14px"><label for="vp-subject">Scene (who does what, where)</label><input type="text" id="vp-subject" placeholder="e.g. a husky runs across a snowy field toward the camera" style="width:100%"></div>
-    <div class="controls" style="margin-top:0">
-      <div class="field"><label for="vp-platform">Platform</label><select id="vp-platform"><option>Seedance</option><option>Veo</option><option>Kling</option><option>Runway</option><option value="Generic">Any / Generic</option></select></div>
-      <div class="field"><label for="vp-shot">Shot type</label><select id="vp-shot"><option>Medium tracking shot</option><option>Close-up</option><option>Wide establishing shot</option><option>Over-the-shoulder</option><option>POV shot</option><option>Aerial drone shot</option></select></div>
-      <div class="field"><label for="vp-cam">Camera movement</label><select id="vp-cam"><option>Slow dolly-in</option><option>Smooth orbit around subject</option><option>Handheld follow</option><option>Static locked-off tripod</option><option>Crane rise reveal</option><option>Fast whip-pan</option></select></div>
-      <div class="field"><label for="vp-light">Lighting &amp; grade</label><select id="vp-light"><option>Golden hour, warm film grade</option><option>Moody low-key, deep shadows</option><option>Bright natural daylight</option><option>Neon-lit night, cyan and magenta</option><option>Soft overcast, muted tones</option><option>High-key studio, clean whites</option></select></div>
-      <div class="field"><label for="vp-style">Style</label><select id="vp-style"><option>Cinematic live-action</option><option>Documentary realism</option><option>3D animated cartoon</option><option>Anime</option><option>Vintage 35mm film</option><option>Commercial / advert polish</option></select></div>
-      <div class="field"><label for="vp-audio">Audio feel</label><select id="vp-audio"><option>Natural ambient sound</option><option>Footsteps, breath, fabric detail</option><option>City background hum</option><option>Wind and weather</option><option>Quiet room tone</option><option value="none">No audio direction</option></select></div>
-    </div>
-    <div class="action-row"><button class="primary-btn" onclick="buildVidPrompt()">Generate prompt</button><button class="ghost-btn" onclick="copyText(document.getElementById('vp-out').value)">Copy prompt</button></div>
-    <div class="field" style="margin-top:18px"><label for="vp-out">Your prompt</label><textarea id="vp-out" readonly placeholder="Your detailed prompt will appear here…"></textarea></div>
-  </div>
-</section>
-
 <section class="tool-view" id="tv-imgedit">
   <button class="back-btn" onclick="goHome()">← All tools</button>
   <h2>Photo Editor</h2><p class="tool-sub">Adjust, filter, rotate — then download. Nothing is uploaded anywhere.</p>
@@ -833,14 +821,6 @@ footer a{font-weight:700}
   <div class="action-row" style="margin-top:12px"><button class="ghost-btn" onclick="invAddRow()">+ Add item</button></div>
   <div class="action-row"><button class="primary-btn" id="btn-invoice">Download invoice PDF</button></div>
   <div class="result-box" id="rb-invoice"></div>
-</section>
-
-<section class="tool-view" id="tv-promptidea">
-  <button class="back-btn" onclick="goHome()">← All tools</button>
-  <h2>Prompt Ideas 🎲</h2><p class="tool-sub">Creative block? Roll the dice — a fresh prompt idea every time.</p>
-  <div class="action-row" style="margin-top:8px"><button class="primary-btn" onclick="rollPrompt()">Roll the dice 🎲</button><button class="ghost-btn" onclick="copyText(document.getElementById('pi-out').value)">Copy prompt</button></div>
-  <div class="field" style="margin-top:18px"><label for="pi-out">Your random prompt</label><textarea id="pi-out" readonly placeholder="Click the dice…"></textarea></div>
-  <p style="color:var(--muted);font-size:14px;margin-top:14px">Want hand-crafted prompts with real examples? Visit our gallery → <a href="https://lovelyprompts.app" target="_blank" rel="noopener"><b>lovelyprompts.app</b></a></p>
 </section>
 
 </main>
@@ -1397,65 +1377,6 @@ $("btn-qr-dl").onclick=()=>{
 $("qr-in").addEventListener("keydown",e=>{if(e.key==="Enter")$("btn-qr").click();});
 
 
-/* ---------- Prompt Builders ---------- */
-function buildImgPrompt(){
-  const s=v=>document.getElementById(v).value;
-  const subject=s("ip-subject").trim();
-  if(!subject){toast("Describe your idea first");return;}
-  const platform=s("ip-platform"), style=s("ip-style"), light=s("ip-light"),
-        shot=s("ip-shot"), mood=s("ip-mood"), ar=s("ip-ar");
-  const detail={
-    "Photorealistic":"ultra-detailed, natural skin and surface texture, realistic depth of field, shot on a full-frame camera with an 85mm lens",
-    "Cinematic":"cinematic color grade, shallow depth of field, film grain, anamorphic lens flare, movie-still composition",
-    "3D Pixar-style animation":"polished 3D render, soft global illumination, expressive character design, subsurface scattering, high-end animation studio quality",
-    "Anime":"clean line art, vibrant cel shading, detailed background art, expressive anime aesthetic",
-    "Watercolor painting":"soft watercolor washes, visible paper texture, delicate pigment blooms, hand-painted feel",
-    "Oil painting":"rich impasto brushstrokes, classical oil painting technique, gallery-quality fine art",
-    "Flat vector illustration":"clean flat vector shapes, bold limited color palette, modern editorial illustration style",
-    "Dark fantasy art":"dark fantasy concept art, intricate detail, dramatic atmosphere, painterly rendering",
-    "Studio product shot":"professional product photography, seamless backdrop, crisp focus, commercial advertising quality"
-  }[style];
-  const moodMap={
-    "Warm and cozy":"warm inviting atmosphere, comforting tones",
-    "Epic and dramatic":"epic scale, dramatic tension, awe-inspiring atmosphere",
-    "Calm and minimal":"serene minimal composition, generous negative space",
-    "Playful and colorful":"joyful energy, vivid saturated palette",
-    "Mysterious and moody":"mysterious atmosphere, low-key shadows, intrigue",
-    "Luxurious and elegant":"refined luxury aesthetic, elegant premium feel"
-  }[mood];
-  let p=subject+", "+shot.toLowerCase()+", "+light.toLowerCase()+", "+detail+", "+moodMap+", highly detailed, sharp focus, professional quality";
-  if(platform==="Midjourney") p+=" --ar "+ar+" --stylize 300";
-  else if(platform==="Flux") p+=" | aspect ratio "+ar;
-  else p+=". Aspect ratio: "+ar+".";
-  document.getElementById("ip-out").value=p;
-  toast("Prompt ready — copy and create!");
-}
-
-function buildVidPrompt(){
-  const s=v=>document.getElementById(v).value;
-  const subject=s("vp-subject").trim();
-  if(!subject){toast("Describe your scene first");return;}
-  const platform=s("vp-platform"), shot=s("vp-shot"), cam=s("vp-cam"),
-        light=s("vp-light"), style=s("vp-style"), audio=s("vp-audio");
-  const styleMap={
-    "Cinematic live-action":"Cinematic live-action, shot on digital cinema camera, shallow depth of field, filmic color grade with soft highlight roll-off.",
-    "Documentary realism":"Documentary realism, natural imperfect framing, true-to-life color, observational feel.",
-    "3D animated cartoon":"High-end 3D animation, expressive squash-and-stretch motion, soft global illumination, family-film polish.",
-    "Anime":"Anime style, dynamic 2D animation, clean line art, dramatic speed lines and cel-shaded lighting.",
-    "Vintage 35mm film":"Vintage 35mm film look, visible grain, warm faded colors, subtle gate weave and halation.",
-    "Commercial / advert polish":"Polished commercial cinematography, pristine lighting, crisp product-grade detail, confident pacing."
-  }[style];
-  let p="";
-  p+=shot+". "+subject.charAt(0).toUpperCase()+subject.slice(1)+". ";
-  p+="Camera: "+cam.toLowerCase()+", smooth and stable motion. ";
-  p+="Lighting: "+light.toLowerCase()+". ";
-  p+=styleMap+" ";
-  if(audio!=="none") p+="Audio: "+audio.toLowerCase()+", no music. ";
-  p+="Coherent motion, consistent character and environment throughout the shot, high detail, no morphing or warping artifacts.";
-  document.getElementById("vp-out").value=p;
-  toast("Prompt ready — copy and create!");
-}
-
 /* ---------- Photo Editor ---------- */
 let edImg=null, edRot=0, edFlipH=false, edFlipV=false, edFx="none";
 setupDrop("imgedit",{onChange:async files=>{
@@ -1919,16 +1840,6 @@ $("btn-invoice").onclick=async()=>{
     showResult("rb-invoice","Invoice "+num+" — total "+curr+total.toFixed(2),fmtSize(blob.size),blob,num+".pdf");
   }catch(e){toast("Couldn't build the invoice");console.error(e);}
 };
-
-/* ---- Prompt Ideas ---- */
-const PI_SUBJECT=["a wise old lighthouse keeper","a sleepy ragdoll cat","a street food vendor at dawn","an ancient library hidden in a tree","a husky puppy discovering snow","a tiny robot watering plants","a grandmother teaching calligraphy","a floating market on a misty river","a falcon landing on a gloved hand","a potter shaping clay in a sunlit studio","a night train crossing a snowy valley","a coral reef city of glass towers","a chai stall glowing in monsoon rain","a knight polishing armor before dawn","a hot air balloon festival at sunrise"];
-const PI_STYLE=["photorealistic, shot on 85mm lens","painted in soft watercolor washes","as polished 3D clay-render art","in vibrant anime style","as dark fantasy concept art","in warm vintage film photography style","as a minimal flat vector illustration","in dramatic cinematic style with film grain"];
-const PI_LIGHT=["golden hour sunlight","soft overcast light","neon night glow","candlelit warmth","dramatic rim lighting","misty morning light"];
-const PI_MOOD=["peaceful and nostalgic","epic and awe-inspiring","cozy and intimate","mysterious and quiet","joyful and vibrant"];
-function rollPrompt(){
-  const r=a=>a[Math.floor(Math.random()*a.length)];
-  $("pi-out").value=r(PI_SUBJECT)+", "+r(PI_STYLE)+", "+r(PI_LIGHT)+", "+r(PI_MOOD)+", highly detailed, professional composition";
-}
 
 </script>
 </body>
